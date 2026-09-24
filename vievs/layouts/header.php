@@ -122,7 +122,7 @@
             </ul>
           </li>
           <li class="nav-menu__item">
-            <a href="contact.html" class="nav-menu__link">Contact</a>
+            <a href="contact.html" class="nav-menu__link">Контакт</a>
           </li>
         </ul>
         <div class="header-right__inner d-lg-none my-3 gap-1 d-flex flx-align">
@@ -190,67 +190,14 @@
         <div class="header-menu d-lg-block d-none">
 
           <ul class="nav-menu flx-align ">
-            <li class="nav-menu__item has-submenu">
-              <a href="javascript:void(0)" class="nav-menu__link">Home</a>
-              <ul class="nav-submenu">
-                <li class="nav-submenu__item">
-                  <a href="index.html" class="nav-submenu__link"> Home One</a>
-                </li>
-                <li class="nav-submenu__item">
-                  <a href="index-two.html" class="nav-submenu__link"> Home Two</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-menu__item has-submenu">
-              <a href="javascript:void(0)" class="nav-menu__link">Products</a>
-              <ul class="nav-submenu">
-                <li class="nav-submenu__item">
-                  <a href="all-product.html" class="nav-submenu__link"> All Products</a>
-                </li>
-                <li class="nav-submenu__item">
-                  <a href="product-details.html" class="nav-submenu__link"> Product Details</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-menu__item has-submenu">
-              <a href="javascript:void(0)" class="nav-menu__link">Pages</a>
-              <ul class="nav-submenu">
-                <li class="nav-submenu__item">
-                  <a href="profile.html" class="nav-submenu__link"> Profile</a>
-                </li>
-                <li class="nav-submenu__item">
-                  <a href="cart.html" class="nav-submenu__link"> Shopping Cart</a>
-                </li>
-                <li class="nav-submenu__item">
-                  <a href="cart-personal.html" class="nav-submenu__link"> Mailing Address</a>
-                </li>
-                <li class="nav-submenu__item">
-                  <a href="cart-payment.html" class="nav-submenu__link"> Payment Method</a>
-                </li>
-                <li class="nav-submenu__item">
-                  <a href="cart-thank-you.html" class="nav-submenu__link"> Preview Order</a>
-                </li>
-                <li class="nav-submenu__item">
-                  <a href="dashboard.html" class="nav-submenu__link"> Dashboard</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-menu__item has-submenu">
-              <a href="javascript:void(0)" class="nav-menu__link">Blog</a>
-              <ul class="nav-submenu">
-                <li class="nav-submenu__item">
-                  <a href="blog.html" class="nav-submenu__link"> Blog</a>
-                </li>
-                <li class="nav-submenu__item">
-                  <a href="blog-details.html" class="nav-submenu__link"> Blog Details</a>
-                </li>
-                <li class="nav-submenu__item">
-                  <a href="blog-details-sidebar.html" class="nav-submenu__link"> Blog Details Sidebar</a>
-                </li>
-              </ul>
+            <li class="nav-menu__item">
+              <a href="contact.html" class="nav-menu__link">Главная</a>
             </li>
             <li class="nav-menu__item">
-              <a href="contact.html" class="nav-menu__link">Contact</a>
+              <a href="contact.html" class="nav-menu__link">Котолог</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="contact.html" class="nav-menu__link">Контакты</a>
             </li>
           </ul>
         </div>
