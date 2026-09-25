@@ -191,13 +191,13 @@
 
           <ul class="nav-menu flx-align ">
             <li class="nav-menu__item">
-              <a href="contact.html" class="nav-menu__link">Главная</a>
+              <a href="index.php?page=main" class="nav-menu__link">Главная</a>
             </li>
             <li class="nav-menu__item">
-              <a href="contact.html" class="nav-menu__link">Котолог</a>
+              <a href="index.php?page=catolog" class="nav-menu__link">Котолог</a>
             </li>
             <li class="nav-menu__item">
-              <a href="contact.html" class="nav-menu__link">Контакты</a>
+              <a href="index.php?page=contact" class="nav-menu__link">Контакт</a>
             </li>
           </ul>
         </div>
