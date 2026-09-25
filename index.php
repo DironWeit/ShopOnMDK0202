@@ -1,6 +1,7 @@
 <?php
-$page = $_GET["page"];
-echo " " . $page . " ";
+if (isset($_GET["page"])) {
+  $page = $_GET["page"];
+}
 
 require 'vievs/layouts/header.php';
 require 'vievs/main.php';
