@@ -194,7 +194,7 @@
               <a href="index.php?page=main" class="nav-menu__link">Главная</a>
             </li>
             <li class="nav-menu__item">
-              <a href="index.php?page=catolog" class="nav-menu__link">Котолог</a>
+              <a href="index.php?page=catolog" class="nav-menu__link">Каталог</a>
             </li>
             <li class="nav-menu__item">
               <a href="index.php?page=contact" class="nav-menu__link">Контакт</a>
