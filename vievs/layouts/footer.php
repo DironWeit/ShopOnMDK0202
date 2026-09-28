@@ -58,7 +58,8 @@
           <div class="footer-item">
             <h5 class="footer-item__title">Аккаунт</h5>
             <ul class="footer-menu">
-              <li class="footer-menu__item"><a href="dashboard.html" class="footer-menu__link">Создать аккаунт</a></li>
+              <li class="footer-menu__item"><a href="index.php?page=creareAccount" class="footer-menu__link">Создать
+                  аккаунт</a></li>
             </ul>
           </div>
         </div>
