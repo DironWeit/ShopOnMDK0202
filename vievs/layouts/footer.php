@@ -12,10 +12,9 @@
         <div class="col-xl-3 col-sm-6">
           <div class="footer-item">
             <div class="footer-item__logo">
-              <a href="index.html"> <img src="assets/images/logo/logo.png" alt=""></a>
+              <a href="index.php?page=main"> <img src="assets/images/logo/logo.png" alt=""></a>
             </div>
-            <p class="footer-item__desc">Lorem consultancy elitsed do eiusmod tempor inci didunt ut labore dolore magna
-              aliqua sed do eiusmod.</p>
+            <p class="footer-item__desc">Кафе самообслуживания с богатой историей и высокими стандартами качества.</p>
             <div class="footer-item__social">
               <ul class="social-list">
                 <li class="social-list__item">
@@ -44,39 +43,22 @@
         </div>
         <div class="col-xl-2 col-sm-6 col-xs-6">
           <div class="footer-item">
-            <h5 class="footer-item__title">Useful Link</h5>
+            <h5 class="footer-item__title">Основные окна</h5>
             <ul class="footer-menu">
-              <li class="footer-menu__item"><a href="all-product.html" class="footer-menu__link">Product </a></li>
-              <li class="footer-menu__item"><a href="product-details.html" class="footer-menu__link">Product Details</a>
+              <li class="footer-menu__item"><a href="index.php?page=main" class="footer-menu__link">Главная </a></li>
+              <li class="footer-menu__item"><a href="index.php?page=catolog" class="footer-menu__link">Каталог</a>
               </li>
-              <li class="footer-menu__item"><a href="profile.html" class="footer-menu__link">Profile </a></li>
-              <li class="footer-menu__item"><a href="cart.html" class="footer-menu__link">Shopping Cart</a></li>
-              <li class="footer-menu__item"><a href="dashboard.html" class="footer-menu__link">Dashboard</a></li>
+              <li class="footer-menu__item"><a href="index.php?page=contact" class="footer-menu__link">Контакты </a>
+              </li>
             </ul>
           </div>
         </div>
         <div class="col-xl-1 d-xl-block d-none"></div>
         <div class="col-xl-3 col-sm-6 col-xs-6">
           <div class="footer-item">
-            <h5 class="footer-item__title">Quick Links </h5>
+            <h5 class="footer-item__title">Аккаунт</h5>
             <ul class="footer-menu">
-              <li class="footer-menu__item"><a href="dashboard.html" class="footer-menu__link">Dashboard </a></li>
-              <li class="footer-menu__item"><a href="login.html" class="footer-menu__link">Login </a></li>
-              <li class="footer-menu__item"><a href="register.html" class="footer-menu__link">Register</a></li>
-              <li class="footer-menu__item"><a href="blog.html" class="footer-menu__link">Blog </a></li>
-              <li class="footer-menu__item"><a href="blog-details.html" class="footer-menu__link">Blog Details</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 col-xs-6">
-          <div class="footer-item">
-            <h5 class="footer-item__title">Categoreis</h5>
-            <ul class="footer-menu">
-              <li class="footer-menu__item"><a href="all-product.html" class="footer-menu__link">WordPress</a></li>
-              <li class="footer-menu__item"><a href="all-product.html" class="footer-menu__link">React</a></li>
-              <li class="footer-menu__item"><a href="all-product.html" class="footer-menu__link">HTML</a></li>
-              <li class="footer-menu__item"><a href="all-product.html" class="footer-menu__link">Laravel</a></li>
-              <li class="footer-menu__item"><a href="all-product.html" class="footer-menu__link">Figma</a></li>
+              <li class="footer-menu__item"><a href="dashboard.html" class="footer-menu__link">Создать аккаунт</a></li>
             </ul>
           </div>
         </div>

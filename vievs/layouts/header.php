@@ -180,7 +180,7 @@
       <nav class="header-inner flx-between">
         <!-- Logo Start -->
         <div class="logo">
-          <a href="index.html" class="link">
+          <a href="index.php?page=main" class="link">
             <img src="assets/images/logo/logo.png" alt="Logo">
           </a>
         </div>
@@ -211,10 +211,10 @@
           </a>
           <div class="header-right__inner gap-3 flx-align d-lg-flex d-none">
 
-            <a href="register.html" class="btn btn-main pill">
+            <a href="index.php?page=creareAccount" class="btn btn-main pill">
               <span class="icon-left icon">
                 <img src="assets/images/icons/user.svg" alt="">
-              </span>Create Account
+              </span>Создать аккаунт
             </a>
             <div class="language-select flx-align select-has-icon">
               <img src="assets/images/icons/globe.svg" alt="" class="globe-icon">
