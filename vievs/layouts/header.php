@@ -205,7 +205,7 @@
 
         <!-- Header Right start -->
         <div class="header-right flx-align">
-          <a href="cart.html" class="header-right__button cart-btn position-relative">
+          <a href="index.php?page=cart" class="header-right__button cart-btn position-relative">
             <img src="assets/images/icons/cart.svg" alt="">
             <span class="qty-badge font-12">0</span>
           </a>

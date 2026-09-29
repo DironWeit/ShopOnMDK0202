@@ -1,5 +1,13 @@
 <?php
 
+// комбо, 
+// сеты, роллы, суши , 
+// автопицца, 
+// бургеры, 
+// снеки соусы и топинги
+
+
+
 // библиотека маршрутов страниц
 $routes = [
   'main' => [
@@ -17,6 +25,10 @@ $routes = [
   'creareAccount' => [
     'controller' => 'controllers/creareAccountController.php',
     'action' => 'showCreareAccount'
+  ],
+  'cart' => [
+    'controller' => 'controllers/cartController.php',
+    'action' => 'showCart'
   ]
 ];
 $page = $_GET['page'] ?? 'main'; // если page пустой, то будет значение main 
