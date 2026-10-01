@@ -324,7 +324,9 @@
                     </div>
                     <div class="product-card__content">
                       <h6 class="product-card__title">
-                        <a href="product-details.html" class="link">SaaS dashboard digital products Title here</a>
+                        <a href="product-details.html" class="link">
+                          <?php echo $product['product_title'] ?>
+                        </a>
                       </h6>
                       <div class="product-card__info flx-between gap-2">
                         <span class="product-card__author">
@@ -395,7 +397,7 @@
                   </div>
                   <div class="product-card__content">
                     <h6 class="product-card__title">
-                      <a href="product-details.html" class="link">SaaS dashboard digital products Title here</a>
+                      <a href="product-details.html" class="link"><?php echo $product['product_title'] ?></a>
                     </h6>
                     <div class="product-card__info flx-between gap-2">
                       <span class="product-card__author">
@@ -436,7 +438,9 @@
                   </div>
                   <div class="product-card__content">
                     <h6 class="product-card__title">
-                      <a href="product-details.html" class="link">SaaS dashboard digital products Title here</a>
+                      <a href="product-details.html" class="link">
+                        <?php echo $product['product_title'] ?>
+                      </a>
                     </h6>
                     <div class="product-card__info flx-between gap-2">
                       <span class="product-card__author">
