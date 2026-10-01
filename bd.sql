@@ -1,41 +1,32 @@
 CREATE TABLE public.categories (
-    category_id    serial4      NOT NULL,
-    category_title varchar(255) NOT NULL,
-    CONSTRAINT categories_pk PRIMARY KEY (category_id)
+category_id serial4 NOT NULL,
+category_title varchar(255) NOT NULL,
+CONSTRAINT categories_pk PRIMARY KEY (category_id)
 );
 
 CREATE TABLE public.ingredients (
-    ingredient_id    serial4      NOT NULL,
-    ingredient_title varchar(255) NOT NULL,
-    CONSTRAINT ingredients_pk PRIMARY KEY (ingredient_id)
+ingredient_id serial4 NOT NULL,
+ingredient_title varchar(255) NOT NULL,
+CONSTRAINT ingredients_pk PRIMARY KEY (ingredient_id)
 );
 
 CREATE TABLE public.products (
-    product_id             serial4      NOT NULL,
-    product_title          varchar(255) NULL,
-    price                  int4         NULL,
-    category_id_categories int4         NULL,
-    description            text         NULL,
-    image                  text         NULL,
-    CONSTRAINT products_pk PRIMARY KEY (product_id),
-    CONSTRAINT products_categories_fk
-        FOREIGN KEY (category_id_categories)
-        REFERENCES public.categories (category_id)
+product_id serial4 NOT NULL,
+product_title varchar(255) NOT NULL, -- сделали NOT NULL, так как у товара должно быть имя
+price int4 NULL,
+category_id_categories int4 NULL,
+description text NULL,
+image text NULL,
+CONSTRAINT products_pk PRIMARY KEY (product_id),
+CONSTRAINT products_categories_fk FOREIGN KEY (category_id_categories) REFERENCES public.categories(category_id) ON DELETE SET NULL
 );
 
 CREATE TABLE public.product_ingredients (
-    product_id    int4          NOT NULL,
-    ingredient_id int4          NOT NULL,
-    CONSTRAINT product_ingredients_pk
-        PRIMARY KEY (product_id, ingredient_id),
-    CONSTRAINT product_ingredients_product_fk
-        FOREIGN KEY (product_id)
-        REFERENCES public.products (product_id)
-        ON DELETE CASCADE,
-    CONSTRAINT product_ingredients_ingredient_fk
-        FOREIGN KEY (ingredient_id)
-        REFERENCES public.ingredients (ingredient_id)
-        ON DELETE CASCADE
+product_id int4 NOT NULL,
+ingredient_id int4 NOT NULL,
+CONSTRAINT product_ingredients_pk PRIMARY KEY (product_id, ingredient_id),
+CONSTRAINT fk_product FOREIGN KEY (product_id) REFERENCES public.products(product_id) ON DELETE CASCADE,
+CONSTRAINT fk_ingredient FOREIGN KEY (ingredient_id) REFERENCES public.ingredients(ingredient_id) ON DELETE CASCADE
 );
 
 INSERT INTO public.categories (category_title) VALUES
@@ -45,6 +36,7 @@ INSERT INTO public.categories (category_title) VALUES
     ('Автопицца'),       -- 4
     ('Удобный перекус'); -- 5
 
+-- Заполнение таблицы ingredients
 INSERT INTO public.ingredients (ingredient_title) VALUES
     ('Лосось'),                        -- 1
     ('Копчёный угорь'),                -- 2
@@ -84,7 +76,7 @@ INSERT INTO public.ingredients (ingredient_title) VALUES
     ('Соус манго спайс'),              -- 36
     ('Копченная курица'),              -- 37
     ('Темпура'),                       -- 38
-    ('Соус Манго-чили');               -- 39
+    ('Соус Манго-чили');     
 
 INSERT INTO public.products (product_title, price, category_id_categories) VALUES
     -- Роллы/Суши (category_id = 1)
