@@ -41,34 +41,15 @@
             <span class="font-18 fw-500">Filters</span>
           </button>
           <ul class="nav common-tab nav-pills mb-0 gap-lg-2 gap-1 ms-lg-auto" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="pills-product-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-product" type="button" role="tab" aria-controls="pills-product"
-                aria-selected="true">All Item</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-bestMatch-tab" data-bs-toggle="pill" data-bs-target="#pills-bestMatch"
-                type="button" role="tab" aria-controls="pills-bestMatch" aria-selected="false">Best Match</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-bestRating-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-bestRating" type="button" role="tab" aria-controls="pills-bestRating"
-                aria-selected="false">Best Rating</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-trending-tab" data-bs-toggle="pill" data-bs-target="#pills-trending"
-                type="button" role="tab" aria-controls="pills-trending" aria-selected="false">Site Template</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-bestOffers-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-bestOffers" type="button" role="tab" aria-controls="pills-bestOffers"
-                aria-selected="false">Best Offers</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-bestSelling-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-bestSelling" type="button" role="tab" aria-controls="pills-bestSelling"
-                aria-selected="false">Best Selling</button>
-            </li>
+            <<?php foreach ($categories as $key => $category): ?>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-product-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-product" type="button" role="tab" aria-controls="pills-product"
+                    aria-selected="true"> <?php echo $category['category_title'] ?></button>
+                </li>
+                <?php
+            endforeach;
+            ?>
           </ul>
           <div class="list-grid d-flex align-items-center gap-2">
             <button class="list-grid__button list-button d-sm-flex d-none text-body"><i
@@ -330,12 +311,13 @@
                       </h6>
                       <div class="product-card__info flx-between gap-2">
                         <span class="product-card__author">
-                          by
-                          <a href="profile.html" class="link hover-text-decoration-underline"> themepix</a>
+                          <a href="profile.html" class="link hover-text-decoration-underline">
+                            <?php echo $product['ingredients'] ?></a>
                         </span>
                         <div class="flx-align gap-2">
-                          <h6 class="product-card__price mb-0">$120</h6>
-                          <span class="product-card__prevPrice text-decoration-line-through">$259</span>
+                          <h6 class="product-card__price mb-0"><?php echo $product['price'], "Руб" ?></a>
+                          </h6>
+                          <!--<span class="product-card__prevPrice text-decoration-line-through">$259</span>-->
                         </div>
                       </div>
                       <div class="product-card__bottom flx-between gap-2">
