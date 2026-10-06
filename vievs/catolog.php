@@ -299,7 +299,7 @@
                   <div class="product-card section-bg">
                     <div class="product-card__thumb d-flex">
                       <a href="product-details.html" class="link w-100">
-                        <img src="assets/images/thumbs/product-img1.png" alt="" class="cover-img">
+                        <img src="<?php echo $product['image'] ?>" alt="" class="cover-img">
                       </a>
                       <button type="button" class="product-card__wishlist"><i class="fas fa-heart"></i></button>
                     </div>
@@ -322,7 +322,7 @@
                       </div>
                       <div class="product-card__bottom flx-between gap-2">
                         <div>
-                          <span class="product-card__sales font-14 mb-2">1200 Sales</span>
+                          <span class="product-card__sales font-14 mb-2"><?php echo $product['category_title'] ?></span>
                           <div class="d-flex align-items-center gap-1">
                             <ul class="star-rating">
                               <li class="star-rating__item font-11"><i class="fas fa-star"></i></li>
