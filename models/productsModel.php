@@ -47,7 +47,7 @@ LEFT JOIN public.product_ingredients pi
     ON pi.product_id = p.product_id
 LEFT JOIN public.ingredients i
     ON i.ingredient_id = pi.ingredient_id
-    WHERE p.product_id = $id
+    WHERE p.category_id_categories = $id
 GROUP BY
     p.product_id,
     p.product_title,
@@ -58,9 +58,7 @@ GROUP BY
 ORDER BY p.product_id;";
 
   $statment = $connection->query($sql);
-  return $statment->fetch();
-
-
+  return $statment->fetchAll();
 
 }
 

@@ -110,64 +110,21 @@
               <ul class="filter-sidebar-list">
                 <li class="filter-sidebar-list__item">
                   <a href="" class="filter-sidebar-list__text">
-                    All Categories <span class="qty">25489</span>
+                    Все категории <span class="qty">25489</span>
                   </a>
                 </li>
-                <li class="filter-sidebar-list__item">
-                  <a href="" class="filter-sidebar-list__text">
-                    Site Template <span class="qty">12,501</span>
-                  </a>
-                </li>
-                <li class="filter-sidebar-list__item">
-                  <a href="" class="filter-sidebar-list__text">
-                    WordPress <span class="qty">1258</span>
-                  </a>
-                </li>
-                <li class="filter-sidebar-list__item">
-                  <a href="" class="filter-sidebar-list__text">
-                    UI Template <span class="qty">1520</span>
-                  </a>
-                </li>
-                <li class="filter-sidebar-list__item">
-                  <a href="" class="filter-sidebar-list__text">
-                    Templates Kits <span class="qty">210</span>
-                  </a>
-                </li>
-                <li class="filter-sidebar-list__item">
-                  <a href="" class="filter-sidebar-list__text">
-                    eCommerce <span class="qty">158</span>
-                  </a>
-                </li>
-                <li class="filter-sidebar-list__item">
-                  <a href="" class="filter-sidebar-list__text">
-                    Marketing <span class="qty">178</span>
-                  </a>
-                </li>
-                <li class="filter-sidebar-list__item">
-                  <a href="" class="filter-sidebar-list__text">
-                    CMS Template <span class="qty">122</span>
-                  </a>
-                </li>
-                <li class="filter-sidebar-list__item">
-                  <a href="" class="filter-sidebar-list__text">
-                    Muse Themes <span class="qty">450</span>
-                  </a>
-                </li>
-                <li class="filter-sidebar-list__item">
-                  <a href="" class="filter-sidebar-list__text">
-                    Blogging <span class="qty">155</span>
-                  </a>
-                </li>
-                <li class="filter-sidebar-list__item">
-                  <a href="" class="filter-sidebar-list__text">
-                    Courses <span class="qty">125</span>
-                  </a>
-                </li>
-                <li class="filter-sidebar-list__item">
-                  <a href="" class="filter-sidebar-list__text">
-                    Forums <span class="qty">35</span>
-                  </a>
-                </li>
+                <?php foreach ($categories as $key => $category): ?>
+                  <li class="filter-sidebar-list__item">
+                    <a href="index.php?page=catolog&cat_id=<?php echo $category["category_id"] ?>"
+                      class="filter-sidebar-list__text">
+                      <?php echo $category['category_title'] ?> <span
+                        class="qty"><?php echo $category['product_count'] ?></span>
+                    </a>
+                  </li>
+                  <?php
+                endforeach;
+                ?>
+
               </ul>
             </div>
           </div>
@@ -175,115 +132,25 @@
             <button type="button" class="filter-sidebar__button font-16 text-capitalize fw-500">Rating</button>
             <div class="filter-sidebar__content">
               <ul class="filter-sidebar-list">
-                <li class="filter-sidebar-list__item">
-                  <div class="filter-sidebar-list__text">
-                    <div class="common-check common-radio">
-                      <input class="form-check-input" type="radio" name="radio" id="veiwAll">
-                      <label class="form-check-label" for="veiwAll"> View All</label>
+                <?php foreach ($ingridients as $key => $ingridient): ?>
+                  <li class="filter-sidebar-list__item">
+                    <div class="filter-sidebar-list__text">
+                      <div class="common-check common-radio">
+                        <input class="form-check-input" type="checkbox"
+                          name="checkboxIng<?php echo $ingridient['ingredient_id'] ?>" id="veiwAll">
+                        <label class="form-check-label" for="veiwAll">
+                          <?php echo $ingridient['ingredient_title'] ?></label>
+                      </div>
+                      <!--<span class="qty">(1859)</span>-->
                     </div>
-                    <span class="qty">(1859)</span>
-                  </div>
-                </li>
-                <li class="filter-sidebar-list__item">
-                  <div class="filter-sidebar-list__text">
-                    <div class="common-check common-radio">
-                      <input class="form-check-input" type="radio" name="radio" id="oneStar">
-                      <label class="form-check-label" for="oneStar"> 1 Star and above</label>
-                    </div>
-                    <span class="qty">(785)</span>
-                  </div>
-                </li>
-                <li class="filter-sidebar-list__item">
-                  <div class="filter-sidebar-list__text">
-                    <div class="common-check common-radio">
-                      <input class="form-check-input" type="radio" name="radio" id="twoStar">
-                      <label class="form-check-label" for="twoStar"> 2 Star and above</label>
-                    </div>
-                    <span class="qty">(1250)</span>
-                  </div>
-                </li>
-                <li class="filter-sidebar-list__item">
-                  <div class="filter-sidebar-list__text">
-                    <div class="common-check common-radio">
-                      <input class="form-check-input" type="radio" name="radio" id="threeStar">
-                      <label class="form-check-label" for="threeStar"> 3 Star and above</label>
-                    </div>
-                    <span class="qty">(7580)</span>
-                  </div>
-                </li>
-                <li class="filter-sidebar-list__item">
-                  <div class="filter-sidebar-list__text">
-                    <div class="common-check common-radio">
-                      <input class="form-check-input" type="radio" name="radio" id="fourStar">
-                      <label class="form-check-label" for="fourStar"> 4 Star and above</label>
-                    </div>
-                    <span class="qty">(1450)</span>
-                  </div>
-                </li>
-                <li class="filter-sidebar-list__item">
-                  <div class="filter-sidebar-list__text">
-                    <div class="common-check common-radio">
-                      <input class="form-check-input" type="radio" name="radio" id="fiveStar">
-                      <label class="form-check-label" for="fiveStar"> 5 Star Rating</label>
-                    </div>
-                    <span class="qty">(2530)</span>
-                  </div>
-                </li>
+                  </li>
+                  <?php
+                endforeach;
+                ?>
               </ul>
             </div>
           </div>
-          <div class="filter-sidebar__item">
-            <button type="button" class="filter-sidebar__button font-16 text-capitalize fw-500">Date Updated</button>
-            <div class="filter-sidebar__content">
-              <ul class="filter-sidebar-list">
-                <li class="filter-sidebar-list__item">
-                  <div class="filter-sidebar-list__text">
-                    <div class="common-check common-radio">
-                      <input class="form-check-input" type="radio" name="radio" id="anyDate">
-                      <label class="form-check-label" for="anyDate"> Any Date</label>
-                    </div>
-                    <span class="qty"> 5,203</span>
-                  </div>
-                </li>
-                <li class="filter-sidebar-list__item">
-                  <div class="filter-sidebar-list__text">
-                    <div class="common-check common-radio">
-                      <input class="form-check-input" type="radio" name="radio" id="lastYear">
-                      <label class="form-check-label" for="lastYear"> In the last year</label>
-                    </div>
-                    <span class="qty">1,258</span>
-                  </div>
-                </li>
-                <li class="filter-sidebar-list__item">
-                  <div class="filter-sidebar-list__text">
-                    <div class="common-check common-radio">
-                      <input class="form-check-input" type="radio" name="radio" id="lastMonth">
-                      <label class="form-check-label" for="lastMonth"> In the last month</label>
-                    </div>
-                    <span class="qty">2450</span>
-                  </div>
-                </li>
-                <li class="filter-sidebar-list__item">
-                  <div class="filter-sidebar-list__text">
-                    <div class="common-check common-radio">
-                      <input class="form-check-input" type="radio" name="radio" id="LastWeek">
-                      <label class="form-check-label" for="LastWeek"> In the last week</label>
-                    </div>
-                    <span class="qty">325</span>
-                  </div>
-                </li>
-                <li class="filter-sidebar-list__item">
-                  <div class="filter-sidebar-list__text">
-                    <div class="common-check common-radio">
-                      <input class="form-check-input" type="radio" name="radio" id="lastDay">
-                      <label class="form-check-label" for="lastDay"> In the last day</label>
-                    </div>
-                    <span class="qty">745</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
+
         </div>
         <!-- ===================== Filter Sidebar End ============================= -->
       </div>
