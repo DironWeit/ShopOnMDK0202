@@ -41,13 +41,13 @@
             <span class="font-18 fw-500">Filters</span>
           </button>
           <ul class="nav common-tab nav-pills mb-0 gap-lg-2 gap-1 ms-lg-auto" id="pills-tab" role="tablist">
-            <<?php foreach ($categories as $key => $category): ?>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="pills-product-tab" data-bs-toggle="pill"
-                    data-bs-target="#pills-product" type="button" role="tab" aria-controls="pills-product"
-                    aria-selected="true"> <?php echo $category['category_title'] ?></button>
-                </li>
-                <?php
+            <?php foreach ($categories as $key => $category): ?>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-product-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-product" type="button" role="tab" aria-controls="pills-product"
+                  aria-selected="true"> <?php echo $category['category_title'] ?></button>
+              </li>
+              <?php
             endforeach;
             ?>
           </ul>
@@ -105,11 +105,11 @@
             class="filter-sidebar__close p-2 position-absolute end-0 top-0 z-index-1 text-body hover-text-main font-20 d-lg-none d-block"><i
               class="las la-times"></i></button>
           <div class="filter-sidebar__item">
-            <button type="button" class="filter-sidebar__button font-16 text-capitalize fw-500">Category</button>
+            <button type="button" class="filter-sidebar__button font-16 text-capitalize fw-500">Категории</button>
             <div class="filter-sidebar__content">
               <ul class="filter-sidebar-list">
                 <li class="filter-sidebar-list__item">
-                  <a href="" class="filter-sidebar-list__text">
+                  <a href="index.php?page=catolog" class="filter-sidebar-list__text">
                     Все категории <span class="qty">25489</span>
                   </a>
                 </li>
@@ -129,25 +129,38 @@
             </div>
           </div>
           <div class="filter-sidebar__item">
-            <button type="button" class="filter-sidebar__button font-16 text-capitalize fw-500">Rating</button>
+            <button type="button" class="filter-sidebar__button font-16 text-capitalize fw-500">Ингредиенты</button>
             <div class="filter-sidebar__content">
-              <ul class="filter-sidebar-list">
-                <?php foreach ($ingridients as $key => $ingridient): ?>
-                  <li class="filter-sidebar-list__item">
-                    <div class="filter-sidebar-list__text">
-                      <div class="common-check common-radio">
-                        <input class="form-check-input" type="checkbox"
-                          name="checkboxIng<?php echo $ingridient['ingredient_id'] ?>" id="veiwAll">
-                        <label class="form-check-label" for="veiwAll">
-                          <?php echo $ingridient['ingredient_title'] ?></label>
+              <form method="GET" action="index.php" id="ingredientsForm">
+                <input type="hidden" name="page" value="catolog">
+
+                <?php if (!empty($_GET['cat_id'])): ?>
+                  <input type="hidden" name="cat_id" value="<?= (int) $_GET['cat_id'] ?>">
+                <?php endif; ?>
+
+                <ul class="filter-sidebar-list">
+                  <?php foreach ($ingridients as $ingridient): ?>
+                    <?php
+                    $isChecked = in_array($ingridient['ingredient_id'], $selectedIngredients ?? []);
+                    ?>
+                    <li class="filter-sidebar-list__item">
+                      <div class="filter-sidebar-list__text">
+                        <div class="common-check common-radio">
+                          <input class="form-check-input" type="checkbox" name="ingredients[]"
+                            value="<?= $ingridient['ingredient_id'] ?>" id="ing_<?= $ingridient['ingredient_id'] ?>"
+                            <?= $isChecked ? 'checked' : '' ?>>
+                          <label class="form-check-label" for="ing_<?= $ingridient['ingredient_id'] ?>">
+                            <?= htmlspecialchars($ingridient['ingredient_title']) ?>
+                          </label>
+                        </div>
                       </div>
-                      <!--<span class="qty">(1859)</span>-->
-                    </div>
-                  </li>
-                  <?php
-                endforeach;
-                ?>
-              </ul>
+                    </li>
+                  <?php endforeach; ?>
+                </ul>
+
+                <button type="submit" class="btn btn-main btn-sm pill mt-3 w-100">Применить</button>
+                <a href="index.php?page=catolog" class="btn btn-outline-light btn-sm pill mt-2 w-100">Сбросить</a>
+              </form>
             </div>
           </div>
 
