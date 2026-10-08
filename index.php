@@ -29,6 +29,10 @@ $routes = [
   'cart' => [
     'controller' => 'controllers/cartController.php',
     'action' => 'showCart'
+  ],
+  'product-details' => [
+    'controller' => 'controllers/product-detailsController.php',
+    'action' => 'showProd'
   ]
 ];
 $page = $_GET['page'] ?? 'main'; // если page пустой, то будет значение main 

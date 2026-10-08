@@ -334,7 +334,8 @@
                             <span class="star-rating__text text-heading fw-500 font-14"> (16)</span>
                           </div>
                         </div>
-                        <a href="product-details.html" class="btn btn-outline-light btn-sm pill">Live Demo</a>
+                        <a href="index.php?page=product-details&id_product=<?php echo $product['product_id'] ?>"
+                          class="btn btn-outline-light btn-sm pill">Подробнее </a>
                       </div>
                     </div>
                   </div>
